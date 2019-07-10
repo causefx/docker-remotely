@@ -34,3 +34,6 @@ RUN \
 
 # ports and volumes
 EXPOSE 5000
+
+WORKDIR /var/www/remotely
+CMD ["/usr/bin/dotnet", "Remotely_Server.dll"]
