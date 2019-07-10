@@ -14,7 +14,11 @@ RUN \
   ffmpeg \
   libc6-dev \
   libgdiplus \
-  aspnetcore-runtime-2.2 && \
+  libicu60 \
+	 libssl1.0 && \
+ apt-get update && \
+ apt-get install -y dotnet-sdk-2.2 && \
+  #aspnetcore-runtime-2.2 && \
  mkdir -p /var/www/remotely && \
  wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb && \
  dpkg -i packages-microsoft-prod.deb && \
