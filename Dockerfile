@@ -5,7 +5,7 @@ ENV HOME="/config"
 
 RUN \
  apt-get update && \
- add-apt-repository universe && \
+ #add-apt-repository universe && \
  apt-get install -y \
   wget \
   apt-transport-https \
