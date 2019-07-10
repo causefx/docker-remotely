@@ -15,13 +15,13 @@ RUN \
   libc6-dev \
   libgdiplus \
   libicu60 \
-	 libssl1.0 && \
- apt-get update && \
- apt-get install -y dotnet-sdk-2.2 && \
+  libssl1.0 && \
   #aspnetcore-runtime-2.2 && \
  mkdir -p /var/www/remotely && \
  wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb && \
  dpkg -i packages-microsoft-prod.deb && \
+ apt-get update && \
+ apt-get install -y aspnetcore-runtime-2.2=2.2.0-1 && \
  wget -q https://remotely.lucency.co/Downloads/linux-x64/Server.zip && \
  unzip -o Server.zip -d /var/www/remotely && \
  rm Server.zip && \
